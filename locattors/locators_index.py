@@ -91,6 +91,7 @@ try:
     # Canada
     canada = driver.find_element(By.CSS_SELECTOR, "tr:nth-child(3)>td:last-child")
     assert canada.text == "Canada"
+    # assert canada.text == "USA" error not equial
 
     canada_text = driver.find_element(By.XPATH, "//*[text()='Canada']")
 
