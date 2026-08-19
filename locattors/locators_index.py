@@ -56,6 +56,18 @@ try:
 
     print("NAV id: ", nav.tag_name)
     print("NAV id: ", nav_1.tag_name )
+
+    #by attribute
+    name_input = driver.find_element(By.CSS_SELECTOR, "[placeholder='Type your name']")
+    item_2 = driver.find_element(By.CSS_SELECTOR, "[href='#item2']")
+    nav_2 = driver.find_element(By.CSS_SELECTOR, "[id= 'nav']")
+
+    input_name = driver.find_element(By.CSS_SELECTOR, "[name= 'name']")
+    input_name_1 = driver.find_element(By.NAME, "name")
+
+
+
+
 #driver.close()
 
 finally:
