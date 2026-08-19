@@ -43,10 +43,10 @@ try:
 
         # by.class
 
-    #abn_style = driver.find_element(By.CLASS_NAME, "abn_style")
-    #abn_style_1 = driver.find_element(By.CSS_SELECTOR, ".abn_style")
-    #print("abn_style class: ", abn_style.get_attribute("class"))
-    #print("abn_style class: ", abn_style.get_attribute("class"))
+    abn = driver.find_element(By.CLASS_NAME, "abn_style")
+    abn1 = driver.find_element(By.CSS_SELECTOR, ".abn_style")
+    print("abn_style class: ", abn.get_attribute("class"))
+    print("abn_1 class: ", abn.get_attribute("class"))
 
     time.sleep(3)
 
