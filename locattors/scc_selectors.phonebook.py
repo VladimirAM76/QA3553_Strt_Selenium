@@ -46,7 +46,7 @@ try:
     abn = driver.find_element(By.CLASS_NAME, "abn_style")
     abn1 = driver.find_element(By.CSS_SELECTOR, ".abn_style")
     print("abn_style class: ", abn.get_attribute("class"))
-    print("abn_1 class: ", abn.get_attribute("class"))
+    print("abn1 class: ", abn1.get_attribute("class"))
 
     time.sleep(3)
 
