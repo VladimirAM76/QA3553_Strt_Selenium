@@ -65,6 +65,15 @@ try:
     input_name = driver.find_element(By.CSS_SELECTOR, "[name= 'name']")
     input_name_1 = driver.find_element(By.NAME, "name")
 
+    input = driver.find_element(By.CSS_SELECTOR, "[placeholder= 'Type your name']")
+    starts_input = driver.find_element(By.CSS_SELECTOR, "[placeholder ^= 'Type']")
+    starts_input_xPath = driver.find_element(By.XPATH, "//input[starts-with(@placeholder,'Type')]")
+
+    ends_input = driver.find_element(By.CSS_SELECTOR, "[placeholder $= 'name']")
+    ends_input_xPath = driver.find_element(By.XPATH, "//*[contains(@placeholder,'name')]")
+
+    contains_input = driver.find_element(By.CSS_SELECTOR, "[placeholder *= 'your']")
+    contains_input_xPath = driver.find_element(By.XPATH, "//*[contains(@placeholder,'your')]")
 
 
 
