@@ -75,6 +75,27 @@ try:
     contains_input = driver.find_element(By.CSS_SELECTOR, "[placeholder *= 'your']")
     contains_input_xPath = driver.find_element(By.XPATH, "//*[contains(@placeholder,'your')]")
 
+    # linkText & partialLinkText
+
+    item1 = driver.find_element(By.LINK_TEXT, "Item 1")
+    all_items = driver.find_elements(By.PARTIAL_LINK_TEXT, "Item")
+
+    first_child = driver.find_element(By.CSS_SELECTOR, "li:first-child")
+    last_child = driver.find_element(By.CSS_SELECTOR, "li:last-child")
+    last_child_1 = driver.find_element(By.XPATH, "//li[last()]")
+
+    nth_child = driver.find_element(By.CSS_SELECTOR, "li:nth-child(2)")
+    # nth_child_1 = driver.find_element(By.CSS_SELECTOR, "li:nth-child(1)")
+    nth_child_1 = driver.find_element(By.XPATH, "//li[2]")
+
+    # Canada
+    canada = driver.find_element(By.CSS_SELECTOR, "tr:nth-child(3)>td:last-child")
+    assert canada.text == "Canada"
+
+    canada_text = driver.find_element(By.XPATH, "//*[text()='Canada']")
+
+# input("Press Enter to close the browser...")
+
 
 
 #driver.close()
