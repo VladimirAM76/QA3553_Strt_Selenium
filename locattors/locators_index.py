@@ -26,6 +26,7 @@ try:
     print(len(links1))
     for link in links1:
         print(link.text)
+    links_3 = driver.find_elements(By.XPATH, "//a")
 
     input = driver.find_element(By.TAG_NAME, "input")
 
@@ -35,6 +36,7 @@ try:
 
     button = driver.find_element(By.TAG_NAME,"button")
     button1 = driver.find_element(By.CSS_SELECTOR, "button")
+    button_2 = driver.find_element(By.XPATH, "//button")
 
     print(button.tag_name)
     print(button.text)
@@ -48,11 +50,15 @@ try:
     container_1 = driver.find_element(By.CSS_SELECTOR, ".container")
     print("container class: ", container.get_attribute("class"))
     print("container_1 class: ", container_1.get_attribute("class"))
+    container_3 = driver.find_element(By.XPATH, "//*[@class='container']")
+
+
 
 #By id
 
     nav = driver.find_element(By.ID, "nav")
     nav_1 = driver.find_element(By.CSS_SELECTOR, "#nav")
+    nav_2 = driver.find_element(By.XPATH, "//*[@id='nav']")
 
     print("NAV id: ", nav.tag_name)
     print("NAV id: ", nav_1.tag_name )
@@ -62,10 +68,19 @@ try:
     item_2 = driver.find_element(By.CSS_SELECTOR, "[href='#item2']")
     nav_2 = driver.find_element(By.CSS_SELECTOR, "[id= 'nav']")
 
+    item_3 = driver.find_element(By.XPATH, "//*[@href='#item2']")
+
     input_name = driver.find_element(By.CSS_SELECTOR, "[name= 'name']")
     input_name_1 = driver.find_element(By.NAME, "name")
+    input_name_2 = driver.find_element(By.XPATH, "//*[@name='name']")
+
+    name_input_1 = driver.find_element(By.XPATH, "//*[@placeholder = 'Type your name']")
+
+
 
     input = driver.find_element(By.CSS_SELECTOR, "[placeholder= 'Type your name']")
+    input_xPath = driver.find_element(By.XPATH, "//*[@placeholder='Type your name']")
+
     starts_input = driver.find_element(By.CSS_SELECTOR, "[placeholder ^= 'Type']")
     starts_input_xPath = driver.find_element(By.XPATH, "//input[starts-with(@placeholder,'Type')]")
 

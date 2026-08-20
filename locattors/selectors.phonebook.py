@@ -1,4 +1,6 @@
 # open browser
+import time
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -26,6 +28,14 @@ try:
     print(len(a_list))
     a_list_2 = driver.find_elements(By.XPATH, "//a")
 
+    button = driver.find_element(By.TAG_NAME, "button")
+    button1 = driver.find_element(By.CSS_SELECTOR, "button")
+    button_2 = driver.find_element(By.XPATH,  "//*[@name='login']")
+
+    time.sleep(3)
+
+    add = driver.find_element(By.XPATH, "//*[@href='/home']")
+
     # by class
     container = driver.find_element(By.CLASS_NAME, "container")
     container_1 = driver.find_element(By.CSS_SELECTOR, ".container")
@@ -38,6 +48,13 @@ try:
     login_login = driver.find_element(By.CLASS_NAME, "login_login__3EHKB")
     login_login_1 = driver.find_element(By.CSS_SELECTOR, ".login_login__3EHKB")
     login_login_2 = driver.find_element(By.XPATH, "//*[@class = 'login_login__3EHKB']")
+
+    a_aria = driver.find_element(By.XPATH, "//*[@class= 'active']")
+
+
+    abn = driver.find_element(By.CLASS_NAME, "abn_style")
+    abn1 = driver.find_element(By.CSS_SELECTOR, ".abn_style")
+    abn2 = driver.find_element(By.XPATH, "//*[@class= 'abn_style']")
 
     # by id
     root = driver.find_element(By.ID, "root")
